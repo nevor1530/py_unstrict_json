@@ -121,6 +121,7 @@ parser = yacc.yacc()
 
 def loads(s):
     """ expose interface """
+    input_str = s
     return parser.parse(s)
 
 
