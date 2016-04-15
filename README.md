@@ -3,6 +3,10 @@
 在爬取网页过程中，有些数据是通过异步加载的json，浏览器实际上是当成js代码执行转成变量的，语法上同js，非json官方定义的严格文法，如字符串可以由单引号括起，key不是字符串，包含注释等情况出现。  
 python自带的json模块不支持这样的文法，于是自己实现一个支持不严谨的json串转成python的dict类型工具。
 
+使用之前，需要先安装[PLY]<http://www.dabeaz.com/ply/ply.html>，可通过pip安装
+
+    sudo pip install ply
+
 参考<http://www.json.org.cn/>的文法，修改部分文法的如下
 
     pair: string ':' value
