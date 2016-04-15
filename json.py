@@ -22,7 +22,7 @@ def t_COMMENT(t):
     pass
 
 def t_NUMBER(t):
-    r"""(\d+(\.\d*)?|\.\d+)([eE][-+]? \d+)?"""
+    r"""-?(\d+(\.\d*)?|\.\d+)([eE][-+]? \d+)?"""
     t.value = decimal.Decimal(t.value)
     return t
 
