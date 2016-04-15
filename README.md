@@ -8,7 +8,8 @@ python自带的json模块不支持这样的文法，于是自己实现一个支�
     pair: string ':' value
         | id ':' value
 
-    string: ""
+    string: " "
+          | ' '
           | " chars "
           | ' chars '
 
@@ -22,11 +23,12 @@ json串支持下面两种注释，同大部分程序语言的单行和多行注�
     # as module
     import py_unstrict_json as exjson
 
-    # json_str is json string which mostly get from websiteimport py_unstrict_json as exjson
+    # json_str is json string which mostly get from website
     # obj is a python dict
+    import py_unstrict_json as exjson
     obj = exjson.loads(json_str)
 
-直接运行，可以带一个参数，表示输入文法，如果不带，则需要从控制台输入或者管道输入
+直接运行，可以带一个参数，表示输入数据文件，如果不带，则需要从控制台输入或者管道输入
 
     # as main
     $ python py_unstrict_json/json.py [file]
