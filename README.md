@@ -29,7 +29,6 @@ json串支持下面两种注释，同大部分程序语言的单行和多行注�
 
     # json_str is json string which mostly get from website
     # obj is a python dict
-    import py_unstrict_json as exjson
     obj = exjson.loads(json_str)
 
 直接运行，可以带一个参数，表示输入数据文件，如果不带，则需要从控制台输入或者管道输入
